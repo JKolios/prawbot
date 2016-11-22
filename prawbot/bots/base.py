@@ -1,10 +1,11 @@
+import logging
 import sched
-from datetime import datetime
 import sys
+from datetime import datetime
+
 from praw.helpers import comment_stream
 
-from utils.url_finder import find_urls
-import logging
+from prawbot.utils.url_finder import find_urls
 
 log = logging.getLogger(__name__)
 log.addHandler(logging.StreamHandler())
