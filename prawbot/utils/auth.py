@@ -37,8 +37,8 @@ def start_server(api_client, host, port):
 
 def stop_server():
     func = flask.request.environ.get('werkzeug.server.shutdown')
-    # if func is None:
-    #     raise RuntimeError('Not running with the Werkzeug Server')
+    if func is None:
+        raise RuntimeError('Not running with the Werkzeug Server')
     func()
 
 
